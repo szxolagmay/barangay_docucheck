@@ -1,24 +1,32 @@
+// src/components/Sidebar.tsx
 import React from "react";
-import "./Sidebar.css";
+import { Link } from "react-router-dom";
+import { Home, FileText, ShieldAlert, User } from "lucide-react";
 
 const Sidebar: React.FC = () => {
-  const menuItems = [
-    "Dashboard",
-    "Issuance",
-    "Audit Logs",
-    "Fraud Monitor",
-    "User",
-  ];
-
   return (
-    <aside className="sidebar">
-      <h1 className="logo">Barangay DocuCheck</h1>
-      <nav>
-        {menuItems.map((item) => (
-          <button key={item} className="sidebar-btn">
-            {item}
-          </button>
-        ))}
+    <aside className="w-60 bg-[#1a1a2e] flex flex-col p-4 text-white">
+      <div className="text-lg font-bold mb-8">Barangay DocuCheck</div>
+      <nav className="flex flex-col gap-4">
+        <Link to="/" className="flex items-center gap-2 hover:text-blue-400">
+          <Home size={18} /> Dashboard
+        </Link>
+
+        <Link to="/issuance" className="flex items-center gap-2 hover:text-blue-400">
+          <FileText size={18} /> Issuance
+        </Link>
+
+        <Link to="/audit-logs" className="flex items-center gap-2 hover:text-blue-400">
+          <FileText size={18} /> Audit Logs
+        </Link>
+
+        <Link to="/fraud-monitor" className="flex items-center gap-2 hover:text-blue-400">
+          <ShieldAlert size={18} /> Fraud Monitor
+        </Link>
+
+        <Link to="/user" className="flex items-center gap-2 hover:text-blue-400">
+          <User size={18} /> User
+        </Link>
       </nav>
     </aside>
   );
