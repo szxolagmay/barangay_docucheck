@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "./components/ui/button";
 import { Home, FileText, ShieldAlert, User } from "lucide-react";
 
 const Dashboard: React.FC = () => {
@@ -43,7 +42,7 @@ const Dashboard: React.FC = () => {
         {/* Welcome */}
         <h1 className="text-2xl font-bold mb-6">Welcome, Barangay 227</h1>
 
-        {/* Stats */}
+        {/* HOLDER DIGITS (EXAMPLE FROM MOCKUP) */}
         <div className="grid grid-cols-3 gap-6 mb-6">
           <Card>
             <CardContent className="p-4 text-center">
@@ -87,6 +86,7 @@ const Dashboard: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody>
+                {/* HOLDER INFO(EXAMPLE FROM MOCKUP) */}  
                   <tr>
                     <td>Business Permit</td>
                     <td>2025-08-09</td>
@@ -143,3 +143,4 @@ const Dashboard: React.FC = () => {
 };
 
 export default Dashboard;
+

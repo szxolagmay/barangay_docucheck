@@ -1,22 +1,21 @@
-import React from "react";
-import Sidebar from "./Sidebar";
-import Navbar from "./Navbar";
-import Issuance from "./Issuance";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Issuance from "./pages/Issuance";
+import BarangayClearance from "./pages/BarangayClearanceForm";
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div className="app-container">
-      <Sidebar />
-      <div className="main-content">
-        <Navbar />
-        <main className="page-content">
-          <Issuance />
-        </main>
-      </div>
-    </div>
+    <Routes>
+      {/* Home / Dashboard */}
+      <Route path="/" element={<Dashboard />} />
+
+      {/* Issuance page */}
+      <Route path="/issuance" element={<Issuance />} />
+
+      {/* Barangay Clearance page */}
+      <Route path="/barangay-clearance" element={<BarangayClearance />} />
+    </Routes>
   );
-};
+}
 
 export default App;
-
