@@ -1,14 +1,20 @@
-// src/components/Sidebar.tsx
 import React from "react";
-import { Link } from "react-router-dom";
-import { Home, FileText, ShieldAlert, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link, useNavigate } from "react-router-dom";
+import { Home, FileText, ShieldAlert, User, Lock } from "lucide-react";
 
 const Sidebar: React.FC = () => {
+  const navigate = useNavigate(); 
+
+  const handleLogout = () => {
+    navigate("/Login");
+  };
+  
   return (
     <aside className="w-60 bg-[#1a1a2e] flex flex-col p-4 text-white">
       <div className="text-lg font-bold mb-8">Barangay DocuCheck</div>
       <nav className="flex flex-col gap-4">
-        <Link to="/" className="flex items-center gap-2 hover:text-blue-400">
+        <Link to="/dashboard" className="flex items-center gap-2 hover:text-blue-400">
           <Home size={18} /> Dashboard
         </Link>
 
@@ -27,6 +33,15 @@ const Sidebar: React.FC = () => {
         <Link to="/user" className="flex items-center gap-2 hover:text-blue-400">
           <User size={18} /> User
         </Link>
+
+        <Button
+          variant="secondary"
+          onClick={handleLogout}
+          className="bg-blue-700 text-white hover:bg-blue-600 flex items-center gap-2"
+        >
+          <Lock className="w-4 h-4" />
+          Logout
+        </Button>
       </nav>
     </aside>
   );

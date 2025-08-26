@@ -6,12 +6,14 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 
-export default function BarangayLogin() {
-  const [code, setCode] = useState("");
-  const navigate = useNavigate();
+export default function Login() {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate(); 
 
   const handleLogin = () => {
-    console.log("Barangay Code Entered:", code);
+    console.log("Login Successful:", name);
+    {/* SUCCESSFUL LOGIN FUNCTION */}
     navigate("/dashboard");
   };
 
@@ -24,7 +26,7 @@ export default function BarangayLogin() {
         </h1>
         <nav className="flex gap-6 text-sm">
           <a href="#about" className="hover:text-blue-400 transition">About</a>
-          <a href="#home" className="text-yellow-400 border-b-2 border-yellow-400">Home</a>
+          <a href="#home" className="hover:text-blue-400 transition">Home</a>
           <a href="#contact" className="hover:text-blue-400 transition">Contact</a>
         </nav>
         <Button variant="secondary" className="bg-blue-700 text-white hover:bg-blue-600">
@@ -52,9 +54,16 @@ export default function BarangayLogin() {
             </div>
             <Input
               type="text"
-              placeholder="Enter Barangay Code"
-              value={code}
-              onChange={(e) => setCode(e.target.value)}
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="flex-1 bg-blue-900 text-white border-none focus:ring-2 focus:ring-blue-500"
+            />
+            <Input
+              type="text"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="flex-1 bg-blue-900 text-white border-none focus:ring-2 focus:ring-blue-500"
             />
             <Button onClick={handleLogin} className="bg-blue-700 hover:bg-blue-600">
@@ -70,3 +79,4 @@ export default function BarangayLogin() {
     </div>
   );
 }
+

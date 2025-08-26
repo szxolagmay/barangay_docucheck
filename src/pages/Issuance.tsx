@@ -1,52 +1,81 @@
 import React from "react";
-import "./Issuance.css";
-import { Home, FileText, ShieldAlert, User } from "lucide-react";
-
-const docs = [
-  { title: "Barangay Clearance", img: "/docs/barangay-clearance.png" },
-  { title: "Business Permit", img: "/docs/business-permit.png" },
-  { title: "Certificate of Indigency", img: "/docs/indigency.png" },
-  { title: "Certificate of Residency", img: "/docs/residency.png" },
-];
+import { Card, CardContent } from "@/components/ui/card";
+import Layout from "./Layout";
+import { useNavigate } from "react-router-dom";
 
 const Issuance: React.FC = () => {
-  return (
-    <div className="flex h-screen bg-[#0f0f1a] text-white">
-      {/* Sidebar */}
-      <aside className="w-60 bg-[#1a1a2e] flex flex-col p-4">
-        <div className="text-lg font-bold mb-8">Barangay DocuCheck</div>
-        <nav className="flex flex-col gap-4">
-          <button className="flex items-center gap-2 hover:text-blue-400">
-            <Home size={18} /> Dashboard
-          </button>
-          <button className="flex items-center gap-2 hover:text-blue-400">
-            <FileText size={18} /> Issuance
-          </button>
-          <button className="flex items-center gap-2 hover:text-blue-400">
-            <FileText size={18} /> Audit Logs
-          </button>
-          <button className="flex items-center gap-2 hover:text-blue-400">
-            <ShieldAlert size={18} /> Fraud Monitor
-          </button>
-          <button className="flex items-center gap-2 hover:text-blue-400">
-            <User size={18} /> User
-          </button>
-        </nav>
-      </aside>
-      
+  const navigate = useNavigate();
 
-    <section>
-      <h2 className="section-title">Issuance</h2>
-      <div className="docs-grid">
-        {docs.map((doc) => (
-          <div key={doc.title} className="doc-card">
-            <img src={doc.img} alt={doc.title} />
-            <h3>{doc.title}</h3>
-          </div>
-        ))}
+  const handleNavigate = (path: string) => {
+    navigate(path);
+
+  };
+
+  return (
+    <Layout>
+      {/* Header */}
+      <header className="flex justify-between items-center border-b border-gray-700 pb-4 mb-6">
+        <nav className="flex gap-6 text-gray-300">
+          <a href="#" className="hover:text-white">About</a>
+          <a href="#" className="hover:text-white">Home</a>
+          <a href="#" className="hover:text-white">Contact</a>
+        </nav>
+        <span className="text-sm">August 10, 2025</span>
+      </header>
+
+      <h1 className="text-2xl font-bold mb-6">Document Issuance</h1>
+
+      {/* Grid of Documents */}
+      <div className="grid grid-cols-2 gap-6">
+        <Card onClick={() => handleNavigate("/pages/BCF")}
+        className="hover:shadow-lg cursor-pointer transition">
+          <CardContent className="p-4 text-center">
+            <img
+              src="https://drive.google.com/uc?export=view&id=14wmqCy4p3wnRK4lj1MemN3quoF_Usadz"
+              alt="Barangay Clearance"
+              className="w-full h-40 object-contain mb-4"
+            />
+            <p className="font-semibold">Barangay Clearance</p>
+          </CardContent>
+        </Card>
+
+        <Card onClick={() => handleNavigate("/pages/BarangayClearanceForm")}
+        className="hover:shadow-lg cursor-pointer transition">
+          <CardContent className="p-4 text-center">
+            <img
+              src="https://drive.google.com/uc?export=view&id=14wmqCy4p3wnRK4lj1MemN3quoF_Usadz"
+              alt="Business Permit"
+              className="w-full h-40 object-contain mb-4"
+            />
+            <p className="font-semibold">Business Permit</p>
+          </CardContent>
+        </Card>
+
+        <Card onClick={() => handleNavigate("/pages/BarangayClearanceForm")}
+        className="hover:shadow-lg cursor-pointer transition">
+          <CardContent className="p-4 text-center">
+            <img
+              src="https://drive.google.com/uc?export=view&id=14wmqCy4p3wnRK4lj1MemN3quoF_Usadz"
+              alt="Certificate of Indigency"
+              className="w-full h-40 object-contain mb-4"
+            />
+            <p className="font-semibold">Certificate of Indigency</p>
+          </CardContent>
+        </Card>
+
+        <Card onClick={() => handleNavigate("/pages/BarangayClearanceForm")}
+        className="hover:shadow-lg cursor-pointer transition">
+          <CardContent className="p-4 text-center">
+            <img
+              src="https://drive.google.com/uc?export=view&id=14wmqCy4p3wnRK4lj1MemN3quoF_Usadz"
+              alt="Certificate of Residency"
+              className="w-full h-40 object-contain mb-4"
+            />
+            <p className="font-semibold">Certificate of Residency</p>
+          </CardContent>
+        </Card>
       </div>
-    </section>
-    </div>
+    </Layout>
   );
 };
 

@@ -1,4 +1,3 @@
-// src/pages/Dashboard.tsx
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "./Layout";

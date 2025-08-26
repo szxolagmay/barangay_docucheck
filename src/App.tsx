@@ -1,24 +1,22 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Issuance from "./pages/Issuance";
-import BarangayClearance from "./pages/BarangayClearanceForm";
-
 
 function App() {
   return (
     <Routes>
-      {/* Login */}
-      <Route path="/" element={<Login />} />
+      {/* Default route HOLDER */}
+      <Route path="/" element={<Navigate to="/login" replace />} />
 
-      {/* Home / Dashboard */}
-      <Route path="/Dashboard" element={<Dashboard />} />
+      {/* Login */}
+      <Route path="/login" element={<Login />} />
+
+      {/* Dashboard */}
+      <Route path="/dashboard" element={<Dashboard />} />
 
       {/* Issuance page */}
       <Route path="/issuance" element={<Issuance />} />
-
-      {/* Barangay Clearance page */}
-      <Route path="/barangay-clearance" element={<BarangayClearance />} />
     </Routes>
   );
 }
