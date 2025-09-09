@@ -12,7 +12,7 @@ export default function PublicDocumentChecker() {
   const navigate = useNavigate(); 
 
   const handleBrgyLogin = () => {
-    {/* SUCCESSFUL LOGIN FUNCTION */}
+    {/* BRGY LOGIN PAGE */}
     navigate("/login");
   };
 
@@ -45,7 +45,7 @@ export default function PublicDocumentChecker() {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Column 1: Tick Document Type */}
+          {/* DOCUMENT TYPE CHECKBOX */}
           <Card className="bg-blue-950 border-none shadow-xl rounded-2xl p-6">
             <h3 className="text-xl font-bold mb-4">Tick Document Type</h3>
             <div className="flex flex-col gap-3 text-gray-300">
@@ -68,7 +68,7 @@ export default function PublicDocumentChecker() {
             </div>
           </Card>
 
-          {/* Column 2: Check Existing Document */}
+          {/* IMPORT DOCUMENT */}
           <Card className="bg-blue-950 border-dashed border-2 border-gray-600 shadow-xl rounded-2xl flex flex-col justify-center items-center text-center p-6">
             <FileText className="w-12 h-12 text-gray-400" />
             <p className="text-gray-300 mt-4">Upload pdf here</p>
@@ -77,7 +77,7 @@ export default function PublicDocumentChecker() {
             </Button>
           </Card>
 
-          {/* Column 3: Check Document QR Code */}
+          {/*  UPLOAD/SCAN QR */}
           <Card className="bg-blue-950 border-dashed border-2 border-gray-600 shadow-xl rounded-2xl flex flex-col justify-center items-center text-center p-6 gap-8">
             <div className="flex flex-col items-center gap-3">
               <Upload className="w-10 h-10 text-gray-400" />
