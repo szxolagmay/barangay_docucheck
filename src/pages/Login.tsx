@@ -17,6 +17,11 @@ export default function Login() {
     navigate("/dashboard");
   };
 
+  const handleReturn = () => {
+    {/* RETURN TO DOCUCHECK FUNCTION */}
+    navigate("/docucheck");
+  };
+
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4">
       {/* Navbar */}
@@ -31,6 +36,9 @@ export default function Login() {
         </nav>
         <Button variant="secondary" className="bg-blue-700 text-white hover:bg-blue-600">
           Barangay Login
+        </Button>
+        <Button onClick={handleReturn} className="bg-blue-700 hover:bg-blue-600">
+          DOCUCHECK
         </Button>
       </header>
 
