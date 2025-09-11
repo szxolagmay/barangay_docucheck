@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
-import { Home, FileText, ShieldAlert, User, Lock } from "lucide-react";
+import { Home, FileText, ShieldAlert, Lock } from "lucide-react";
 
 const Sidebar: React.FC = () => {
   const navigate = useNavigate(); 
@@ -28,10 +28,6 @@ const Sidebar: React.FC = () => {
 
         <Link to="/temp" className="flex items-center gap-2 hover:text-blue-400">
           <ShieldAlert size={18} /> Fraud Monitor
-        </Link>
-
-        <Link to="/temp" className="flex items-center gap-2 hover:text-blue-400">
-          <User size={18} /> User
         </Link>
 
         <Button

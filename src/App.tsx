@@ -4,6 +4,9 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Issuance from "./pages/Issuance";
 import Temp from "./pages/temp";
+import BarangayClearanceForm from "./pages/Fbrgyclearance";
+import BusinessPermit from "./pages/Fbusinesspermit";
+import CertIndigency from "./pages/Fcertindigency";
 
 function App() {
   return (
@@ -22,6 +25,16 @@ function App() {
 
         {/* Issuance page */}
         <Route path="/issuance" element={<Issuance />} />
+
+        {/* FORMS: brgy clearance */}
+        <Route path="/fbrgyclearance" element={<BarangayClearanceForm />} />
+
+        {/* FORMS: biz permit */}
+        <Route path="/fbusinesspermit" element={<BusinessPermit />} />
+
+        {/* FORMS: cert of indigency */}
+        <Route path="/fcertindigency" element={<CertIndigency />} />
+        
 
         {/* TEMPORARY PAGE */}
         <Route path="/temp" element={<Temp />} />

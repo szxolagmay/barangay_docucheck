@@ -27,7 +27,7 @@ const Issuance: React.FC = () => {
 
       {/* Grid of Documents */}
       <div className="grid grid-cols-2 gap-6">
-        <Card onClick={() => handleNavigate("/pages/BCF")}
+        <Card onClick={() => handleNavigate("/fbrgyclearance")}
         className="hover:shadow-lg cursor-pointer transition">
           <CardContent className="p-4 text-center">
             <img
@@ -39,7 +39,7 @@ const Issuance: React.FC = () => {
           </CardContent>
         </Card>
 
-        <Card onClick={() => handleNavigate("/pages/BarangayClearanceForm")}
+        <Card onClick={() => handleNavigate("/fbusinesspermit")}
         className="hover:shadow-lg cursor-pointer transition">
           <CardContent className="p-4 text-center">
             <img
@@ -51,7 +51,7 @@ const Issuance: React.FC = () => {
           </CardContent>
         </Card>
 
-        <Card onClick={() => handleNavigate("/pages/BarangayClearanceForm")}
+        <Card onClick={() => handleNavigate("/fcertindigency")}
         className="hover:shadow-lg cursor-pointer transition">
           <CardContent className="p-4 text-center">
             <img
@@ -63,7 +63,7 @@ const Issuance: React.FC = () => {
           </CardContent>
         </Card>
 
-        <Card onClick={() => handleNavigate("/pages/BarangayClearanceForm")}
+        <Card onClick={() => handleNavigate("/fcertindigency")}
         className="hover:shadow-lg cursor-pointer transition">
           <CardContent className="p-4 text-center">
             <img
