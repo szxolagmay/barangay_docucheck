@@ -22,7 +22,7 @@ const Sidebar: React.FC = () => {
           <FileText size={18} /> Issuance
         </Link>
 
-        <Link to="/temp" className="flex items-center gap-2 hover:text-blue-400">
+        <Link to="/audit" className="flex items-center gap-2 hover:text-blue-400">
           <FileText size={18} /> Audit Logs
         </Link>
 

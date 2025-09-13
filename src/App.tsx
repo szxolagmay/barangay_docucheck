@@ -3,6 +3,7 @@ import DocuCheck from "./pages/DocuCheck";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Issuance from "./pages/Issuance";
+import Audit from "./pages/Audit";
 import Temp from "./pages/temp";
 import BarangayClearanceForm from "./pages/Fbrgyclearance";
 import BusinessPermit from "./pages/Fbusinesspermit";
@@ -25,6 +26,9 @@ function App() {
 
         {/* Issuance page */}
         <Route path="/issuance" element={<Issuance />} />
+
+        {/* Audit Logs page */}
+        <Route path="/audit" element={<Audit />} />
 
         {/* FORMS: brgy clearance */}
         <Route path="/fbrgyclearance" element={<BarangayClearanceForm />} />
