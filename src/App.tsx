@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Issuance from "./pages/Issuance";
 import Audit from "./pages/Audit";
+import Fraud from "./pages/Fraud";
 import Temp from "./pages/temp";
 import BarangayClearanceForm from "./pages/Fbrgyclearance";
 import BusinessPermit from "./pages/Fbusinesspermit";
@@ -29,6 +30,9 @@ function App() {
 
         {/* Audit Logs page */}
         <Route path="/audit" element={<Audit />} />
+
+        {/* Fraud Detection page */}
+        <Route path="/fraud" element={<Fraud />} />
 
         {/* FORMS: brgy clearance */}
         <Route path="/fbrgyclearance" element={<BarangayClearanceForm />} />

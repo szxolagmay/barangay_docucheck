@@ -26,7 +26,7 @@ const Sidebar: React.FC = () => {
           <FileText size={18} /> Audit Logs
         </Link>
 
-        <Link to="/temp" className="flex items-center gap-2 hover:text-blue-400">
+        <Link to="/fraud" className="flex items-center gap-2 hover:text-blue-400">
           <ShieldAlert size={18} /> Fraud Monitor
         </Link>
 
