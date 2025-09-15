@@ -17,7 +17,7 @@ const Issuance: React.FC = () => {
       <header className="flex justify-between items-center border-b border-gray-700 pb-4 mb-6">
         <nav className="flex gap-6 text-gray-300">
           <a href="#" className="hover:text-white">About</a>
-          <a href="#" className="hover:text-white">Home</a>
+          <a href="#" className="text-blue-400">Home</a>
           <a href="#" className="hover:text-white">Contact</a>
         </nav>
         <span className="text-sm">August 10, 2025</span>

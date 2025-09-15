@@ -34,9 +34,6 @@ export default function Login() {
           <a href="#home" className="hover:text-blue-400 transition">Home</a>
           <a href="#contact" className="hover:text-blue-400 transition">Contact</a>
         </nav>
-        <Button variant="secondary" className="bg-blue-700 text-white hover:bg-blue-600">
-          Barangay Login
-        </Button>
         <Button onClick={handleReturn} className="bg-blue-700 hover:bg-blue-600">
           DOCUCHECK
         </Button>
